@@ -9,11 +9,26 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
-<body class="grid place-items-center bg-amber-300">
-    <section class="container mx-auto">
+<body class="grid place-items-center bg-gray-300">
+
+    <section class="text-2xl font-bold bg-teal-400 p-2 text-white">
         Laravel Day One 
     </section>
 
-    <p class="bg-red-400 p-3 shadow-md rounded-md cursor-pointer">The application environment is : {{App::environment()}}
-</body>
+    <div class="text-4xl my-3 font-bold underline">
+        <h1>Environment Configuration</h1>
+    </div>
+    
+    <div class="bg-red-400 p-3 shadow-md rounded-md cursor-pointer">
+        <p >The application environment is : {{App::environment()}}
+    </div>
+    
+    <div class="text-4xl my-3 font-bold underline">
+        <h1>Accessing Configuration Values</h1>
+    </div>
+
+    <div class="bg-green-400 p-3 shadow-md rounded-md cursor-pointer">
+        <p >The timezone is : {{config('app.timezone')}}
+    </div>
+    </body>
 </html>
